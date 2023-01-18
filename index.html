@@ -20,6 +20,16 @@
     <script defer src="js/script.js" ></script>
 </head>
 <body>
-    
+    <div id="root">
+        <div class="container"> 
+            <p v-if="mails.length<10" >Loading...</p>
+            <div v-else>   
+                <h1>Team mail list</h1> 
+                <ul>
+                    <li  v-for="mail in mails" class="h5 ">{{mail}} </li>
+                </ul>
+            </div>  
+        </div>
+    </div>
 </body>
 </html>
